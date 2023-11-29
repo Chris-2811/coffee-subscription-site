@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div
+        class="container relative flex justify-between items-center pt-8 pb-10 md:pt-10 md:pb-[3.4rem] lg:pt-[2.7rem] lg:pb-[2.7rem]"
+      >
+        <div class="logo">
+          <img src="assets/shared/desktop/logo.svg" alt="logo" />
+        </div>
+        <button
+          class="mobile-nav-toggle"
+          id="mobile-nav-toggle"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span class="sr-only">Menu</span>
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+        <nav
+          class="primary-navigation"
+          id="primary-navigation"
+          data-visible="false"
+        >
+          <ul role="list" class="flex gap-8">
+            <li>
+              <a href="index.html" class="">Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="">about us</a>
+            </li>
+            <li>
+              <a href="plan.html" class="">create your plan</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="hero">
+        <div class="container lg:px-10 xl:px-0">
+          <div
+            class="bg-container text-center py-[6.3rem] md:text-left lg:py-[7.3125rem]"
+          >
+            <h1
+              class="font-heading text-heading-light text-4xl md:text-5xl max-w-[330px] mx-auto md:mx-0 lg:text-6xl lg:max-w-[500px]"
+            >
+              Great coffee made simple.
+            </h1>
+            <p
+              class="text-body-light text-sm leading-relaxed mt-6 mb-10 max-w-[440px] mx-auto md:max-w-[400px] md:mx-0 lg:mt-8 lg:mb-[3.5rem] lg:text-base lg:leading-base"
+            >
+              Start your mornings with the world’s best coffees. Try our
+              expertly curated artisan coffees from our best roasters delivered
+              directly to your door, at your schedule.
+            </p>
+            <a href="plan.html" class="btn btn-primary">Create your plan</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Collection Section -->
+      <section id="product-collection" class="product-collection mt-[7.5rem]">
+        <div class="container">
+          <div
+            class="relative flex flex-col justify-center gap-[3rem] text-center pt-[5.5rem] px-[1.5rem] md:px-[3.5rem] md:max-w-[889px] md:mx-auto lg:flex-row lg:max-w-[1111px] lg:gap-8"
+          >
+            <!-- Product 1 -->
+            <div
+              class="md:grid grid-cols-2 md:text-left lg:block lg:text-center"
+            >
+              <img
+                src="assets/home/desktop/image-gran-espresso.png"
+                alt="coffee"
+                class="w-[71.65%] mx-auto max-w-[255px] max-h-[191px]"
+              />
+              <div>
+                <h3 class="font-heading text-heading-dark text-xl mt-6 mb-4">
+                  Gran Espresso
+                </h3>
+                <p
+                  class="font-body text-body-dark text-sm leading-relaxed max-w-[282px] mx-auto md:mx-0 lg:mx-auto lg:max-w-[255px] lg:text-base"
+                >
+                  Light and flavorful blend with cocoa and black pepper for an
+                  intense experience
+                </p>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div
+              class="md:grid grid-cols-2 md:text-left lg:block lg:text-center"
+            >
+              <img
+                src="assets/home/desktop/image-planalto.png"
+                alt="coffee"
+                class="w-[71.65%] mx-auto max-w-[255px] max-h-[191px]"
+              />
+              <div>
+                <h3 class="font-heading text-heading-dark text-xl mt-6 mb-4">
+                  Planalto
+                </h3>
+                <p
+                  class="font-body text-body-dark text-sm leading-relaxed max-w-[282px] mx-auto md:mx-0 lg:mx-auto lg:max-w-[255px] lg:text-base"
+                >
+                  Light and flavorful blend with cocoa and black pepper for an
+                  intense experience
+                </p>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div
+              class="md:grid grid-cols-2 md:text-left lg:block lg:text-center"
+            >
+              <img
+                src="assets/home/desktop/image-piccollo.png"
+                alt="coffee"
+                class="w-[71.65%] mx-auto max-w-[255px] max-h-[191px]"
+              />
+              <div>
+                <h3 class="font-heading text-heading-dark text-xl mt-6 mb-4">
+                  Piccollo
+                </h3>
+                <p
+                  class="font-body text-body-dark text-sm leading-relaxed max-w-[282px] mx-auto md:mx-0 lg:mx-auto lg:max-w-[255px] lg:text-base"
+                >
+                  Light and flavorful blend with cocoa and black pepper for an
+                  intense experience
+                </p>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div
+              class="md:grid grid-cols-2 md:text-left lg:block lg:text-center"
+            >
+              <img
+                src="assets/home/desktop/image-danche.png"
+                alt="coffee"
+                class="w-[71.65%] mx-auto max-w-[255px] max-h-[191px]"
+              />
+              <div>
+                <h3 class="font-heading text-heading-dark text-xl mt-6 mb-4">
+                  Danche
+                </h3>
+                <p
+                  class="font-body text-body-dark text-sm leading-relaxed max-w-[282px] mx-auto md:mx-0 lg:mx-auto lg:max-w-[255px] lg:text-base"
+                >
+                  Light and flavorful blend with cocoa and black pepper for an
+                  intense experience
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Section -->
+      <section id="features" class="features mt-[7.5rem]">
+        <div class="container">
+          <div
+            class="bg-dark-grey-blue pt-[4rem] px-6 text-center rounded-[10px] h-[902px] md:px-[3.5rem] md:h-[573px] lg:pt-[6.25rem]"
+          >
+            <h2 class="font-heading text-heading-light text-2xl mb-6 lg:mb-8">
+              Why choose us?
+            </h2>
+            <p
+              class="font-body text-body-light text-sm opacity-80 leading-relaxed max-w-[540px] mx-auto lg:text-base"
+            >
+              A large part of our role is choosing which particular coffees will
+              be featured in our range. This means working closely with the best
+              coffee growers to give you a more impactful experience on every
+              level.
+            </p>
+            <div
+              class="flex flex-col gap-6 translate-y-[4rem] lg:translate-y-[5.375rem] lg:flex-row"
+            >
+              <div
+                class="bg-dark-cyan min-h-[382px] w-full max-w-[440px] mx-auto rounded-lg pt-[4.5rem] pb-[3.25rem] py-[0.75rem] md:min-h-0 md:flex md:justify-center md:text-left md:items-center md:gap-[3.5rem] md:py-10 md:max-w-[573px] md:mx-auto lg:flex-col lg:text-center lg:pt-[4.5rem] lg:pb-[3rem]"
+              >
+                <img
+                  src="assets/home/desktop/icon-coffee-bean.svg"
+                  alt="coffee-bean"
+                  class="mx-auto md:mx-0 w-[4.5rem] md:w-[3.5rem] lg:w-[4.5rem]"
+                />
+                <div>
+                  <h3
+                    class="font-heading text-heading-light text-xl mt-[3.5rem] mb-6 md:mt-0 md:mb-4 lg:mb-6"
+                  >
+                    Best quality
+                  </h3>
+                  <p
+                    class="font-body text-body-light text-sm leading-base max-w-[212px] mx-auto md:mx-0 lg:text-base"
+                  >
+                    Discover an endless variety of the world’s best artisan
+                    coffee from each of our roasters.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-dark-cyan min-h-[382px] w-full max-w-[440px] mx-auto rounded-lg pt-[4.5rem] pb-[3.25rem] py-[0.75rem] md:min-h-0 md:flex md:justify-center md:items-center md:text-left md:gap-[3.5rem] md:py-10 md:max-w-[573px] md:mx-auto lg:flex-col lg:text-center lg:pt-[4.5rem] lg:pb-[3rem]"
+              >
+                <img
+                  src="assets/home/desktop/icon-gift.svg"
+                  alt="gift"
+                  class="mx-auto md:mx-0 w-[4.5rem] md:w-[3.5rem] lg:w-[4.5rem]"
+                />
+                <div>
+                  <h3
+                    class="font-heading text-heading-light text-xl mt-[3.5rem] mb-6 md:mt-0 md:mb-4 lg:mb-6"
+                  >
+                    Exclusive benefits
+                  </h3>
+                  <p
+                    class="font-body text-body-light text-sm leading-base max-w-[212px] mx-auto md:mx-0 lg:text-base"
+                  >
+                    Special offers and swag when you subscribe , including 30%
+                    off your first shipment.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-dark-cyan min-h-[382px] w-full max-w-[440px] mx-auto rounded-lg pt-[5.2rem] pb-[3rem] py-[0.75rem] md:min-h-0 md:flex md:justify-center md:items-center md:text-left md:gap-[3.5rem] md:py-10 md:max-w-[573px] md:mx-auto lg:flex-col lg:text-center lg:pt-[4.5rem] lg:pb-[3rem]"
+              >
+                <img
+                  src="assets/home/desktop/icon-truck.svg"
+                  alt="truck"
+                  class="mx-auto h-[4.5rem] md:mx-0 md:w-[3.5rem] lg:w-[4.5rem]"
+                />
+                <div>
+                  <h3
+                    class="font-heading text-heading-light text-xl mt-[3.5rem] mb-6 md:mt-0 md:mb-4 lg:mb-6"
+                  >
+                    Free shipping
+                  </h3>
+                  <p
+                    class="font-body text-body-light text-sm leading-base max-w-[212px] mx-auto md:mx-0 lg:text-base"
+                  >
+                    We cover the cost and coffee is delivered fast. Peak
+                    freshness: guaranteed.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section
+        id="cta"
+        class="cta mt-[44.8125rem] md:mt-[27.125rem] lg:mt-[21.9375rem] text-center"
+      >
+        <div
+          class="px-6 md:px-10 max-w-[845px] mx-auto md:text-left lg:max-w-[1045px] lg:px-0"
+        >
+          <div class="font-heading text-xl text-grey mb-20">How it works</div>
+          <div
+            class="md:flex md:items-start md:justify-between md:text-left md:gap-[0.75rem] lg:justify-start lg:gap-[6rem]"
+          >
+            <div class="mb-[3.5rem] md:mb-0 md:w-[223px] lg:w-[285px]">
+              <div
+                class="hidden md:block relative border-2 bg-white border-dark-cyan w-8 h-8 rounded-full mb-12"
+              >
+                <div
+                  class="absolute oval-line bg-pale-orange h-0.5 left-full top-[50%] -translate-y-[50%] -z-10"
+                ></div>
+              </div>
+              <div class="large-number">01</div>
+              <h3
+                class="font-serif text-heading-dark text-2xl my-6 lg:text-3xl lg:mt-10 lg:mb-9 lg:max-w-[223px]"
+              >
+                Pick your coffee
+              </h3>
+              <p class="text-sm lg:text-base">
+                Select from our evolving range of artisan coffees. Our beans are
+                ethically sourced and we pay fair prices for them. There are new
+                coffees in all profiles every month for you to try out.
+              </p>
+            </div>
+            <div class="mb-[3.5rem] md:mb-0 md:w-[223px] lg:w-[285px]">
+              <div
+                class="hidden md:block border-dark-cyan border-2 bg-white w-8 h-8 rounded-full mb-12"
+              ></div>
+              <div class="large-number">02</div>
+              <h3
+                class="font-serif text-heading-dark text-2xl my-6 lg:text-3xl lg:mt-10 lg:mb-9 lg:max-w-[223px]"
+              >
+                Choose the frequency
+              </h3>
+              <p class="text-sm lg:text-base">
+                Customize your order frequency, quantity, even your roast style
+                and grind type. Pause, skip or cancel your subscription with no
+                commitment through our online portal.
+              </p>
+            </div>
+            <div class="md:w-[223px] lg:w-[285px]">
+              <div
+                class="hidden md:block border-dark-cyan border-2 bg-white w-8 h-8 rounded-full mb-12"
+                class="border-dark-cyan w-8 h-8 rounded-full mb-12"
+              ></div>
+              <div class="large-number">03</div>
+              <h3
+                class="font-serif text-heading-dark text-2xl my-6 lg:mt-10 lg:mb-9 lg:text-3xl lg:max-w-[223px]"
+              >
+                Receive and enjoy!
+              </h3>
+              <p class="text-sm lg:text-base">
+                We ship your package within 48 hours, freshly roasted. Sit back
+                and enjoy award-winning world-class coffees curated to provide a
+                distinct tasting experience.
+              </p>
+            </div>
+          </div>
+          <a
+            href="plan.html"
+            class="btn-primary mt-[5rem] md:mt-[2.75rem] lg:mt-[3.6rem]"
+            >Create your plan</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="footer px-6 md:px-10 rounded-sm mt-[7.5rem] mb-[4.5rem] lg:mt-[12.5rem] lg:mb-[5.4rem]"
+      id="footer"
+    >
+      <div
+        class="container bg-dark-grey-blue flex flex-col gap-12 items-center py-[3.5rem] text-center md:gap-8 lg:py-12 lg:flex-row lg:justify-between lg:gap-[6.4rem] xl:px-[5.3125rem]"
+      >
+        <!-- Logo -->
+        <div class="logo">
+          <img src="assets/shared/desktop/logo-light.png" alt="logo" />
+        </div>
+        <div class="lg:flex lg:items-center lg:flex-1 lg:justify-between">
+          <!-- Nav -->
+          <nav class="secondary-navigation" aria-label="secondary-navigation">
+            <ul
+              role="list"
+              class="flex flex-col gap-6 md:flex-row md:gap-8 md:items-center"
+            >
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="plan.html">create your plan</a></li>
+            </ul>
+          </nav>
+          <!-- Socials -->
+          <ul
+            class="socials flex justify-center gap-6 mt-12 md:mt-[4rem] lg:mt-0"
+            role="list"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="uppercase text-grey"
+                target="_blank"
+                aria-label="facebook"
+              >
+                <svg class="social-icon">
+                  <use
+                    xlink:href="assets/shared/desktop/social-icons.svg#icon-facebook"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="uppercase text-grey"
+                aria-label="twitter"
+              >
+                <svg class="social-icon">
+                  <use
+                    xlink:href="assets/shared/desktop/social-icons.svg#icon-twitter"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="index.html"
+                class="uppercase text-grey"
+                aria-label="instagram"
+              >
+                <svg class="social-icon">
+                  <use
+                    xlink:href="assets/shared/desktop/social-icons.svg#icon-instagram"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

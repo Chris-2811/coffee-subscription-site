@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div
+        class="container relative flex justify-between items-center pt-8 pb-10 md:pt-10 md:pb-[3.4rem] lg:pt-[2.7rem] lg:pb-[2.7rem]"
+      >
+        <div class="logo">
+          <img src="assets/shared/desktop/logo.svg" alt="logo" />
+        </div>
+        <button
+          class="mobile-nav-toggle"
+          id="mobile-nav-toggle"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span class="sr-only">Menu</span>
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+        <nav
+          class="primary-navigation"
+          id="primary-navigation"
+          data-visible="false"
+        >
+          <ul role="list" class="flex gap-8">
+            <li>
+              <a href="index.html" class="">Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="">about us</a>
+            </li>
+            <li>
+              <a href="plan.html" class="">create your plan</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- About Section -->
+      <section id="hero" class="hero--about px-6 md:px-10">
+        <div
+          class="container rounded-lg text-center pt-[7rem] pb-[5.5rem] px-6 md:px-[3.5rem] md:py-[7.4rem] md:text-left lg:py-[8.5rem] lg:px-[5.3rem]"
+        >
+          <h1
+            class="font-heading text-heading-light text-4xl md:text-5xl max-w-[330px] mx-auto md:mx-0 lg:text-6xl lg:max-w-[500px]"
+          >
+            About Us
+          </h1>
+          <p
+            class="text-body-light text-sm leading-relaxed mt-6 mb-10 max-w-[440px] mx-auto md:max-w-[400px] md:mx-0 lg:mt-8 lg:mb-[3.5rem] lg:text-base lg:leading-base"
+          >
+            Coffeeroasters began its journey of exotic discovery in 1999,
+            highlighting stories of coffee from around the world. We have since
+            been dedicated to bring the perfect cup - from bean to brew - in
+            every shipment.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section commitment one -->
+      <section
+        id="commitment"
+        class="commitment mt-[7.5rem] md:mt-[9rem] lg:mt-[10.5rem]"
+      >
+        <div
+          class="container flex flex-col md:flex-row items-center text-center md:gap-[4.5rem] md:text-left lg:max-w-[1110px] lg:gap-[7.8rem]"
+        >
+          <div class="commitment-image"></div>
+          <div>
+            <h2
+              class="font-heading text-heading-dark text-3xl mt-12 mb-[1.8rem] md:mt-0 lg:text-4xl"
+            >
+              Our commitment
+            </h2>
+            <p
+              class="font-body text-body-dark text-sm leading-relaxed lg:text-base"
+            >
+              We’re built on a simple mission and a commitment to doing good
+              along the way. We want to make it easy for you to discover and
+              brew the world’s best coffee at home. It all starts at the source.
+              To locate the specific lots we want to purchase, we travel nearly
+              60 days a year trying to understand the challenges and
+              opportunities in each of these places. We collaborate with
+              exceptional coffee growers and empower a global community of
+              farmers through with well above fair-trade benchmarks. We also
+              offer training, support farm community initiatives, and invest in
+              coffee plant science. Curating only the finest blends, we roast
+              each lot to highlight tasting profiles distinctive to their native
+              growing region.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section commitment two -->
+      <section class="commitment-two mt-[12.375rem] md:mt-[19rem]">
+        <div class="container">
+          <div
+            class="relative bg-quality bg-cover pt-[9rem] pb-[3.8rem] px-6 text-center rounded-lg md:pt-[14rem] md:pb-[4.2rem] lg:pt-[5.5rem] lg:pb-[10.5rem] lg:text-left lg:px-[5.3rem]"
+          >
+            <div
+              alt="coffe"
+              class="absolute image h-[9.6rem] w-[17.5rem] left-[50%] top-0 translate-y-[-50%] -translate-x-[50%] rounded-lg md:w-[573px] md:h-[320px] lg:w-[445px] lg:h-[474px] lg:-translate-x-[0] lg:translate-y-[0] lg:left-auto lg:top-auto lg:bottom-[5.5rem]"
+            ></div>
+
+            <div>
+              <h2
+                class="font-heading text-heading-light text-2xl mb-6 lg:text-4xl"
+              >
+                Uncompromising <br class="md:hidden" />
+                quality
+              </h2>
+              <p
+                class="font-body text-body-light text-sm leading-relaxed md:max-w-[540px] md:mx-auto lg:text-base lg:mx-0"
+              >
+                Although we work with growers who pay close attention to all
+                stages of harvest and processing, we employ, on our end, a
+                rigorous quality control program to avoid over-roasting or
+                baking the coffee dry. Every bag of coffee is tagged with a
+                roast date and batch number. Our goal is to roast consistent,
+                user-friendly coffee, so that brewing is easy and enjoyable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact mt-[7.5rem]">
+        <div
+          class="max-w-[1045px] mx-auto px-6 md:px-10 xl:px-0 text-center md:text-left"
+        >
+          <h2 class="font-heading text-grey text-xl mb-[4rem]">
+            Our headquarters
+          </h2>
+          <div
+            class="flex flex-col md:flex-row gap-20 md:auto-cols-auto md:text-left md:gap-10 lg:gap-[5rem]"
+          >
+            <div class="md:w-[223px] lg:w-[285px]">
+              <img
+                src="assets/about/desktop/illustration-uk.svg"
+                alt="map of uk"
+                class="mx-auto md:mx-0"
+              />
+              <h3
+                class="text-heading-dark font-heading text-2xl mt-12 mb-5 md:text-xl lg:text-3xl"
+              >
+                United Kingdom
+              </h3>
+              <div class="leading-relaxed">
+                68 Asfordby <br />
+                Rd Alcaston <br />
+                SY6 1YA <br />
+                +44 1241 918425
+              </div>
+            </div>
+            <div class="md:w-[223px] lg:w-[285px]">
+              <img
+                src="assets/about/desktop/illustration-canada.svg"
+                alt="map of canada"
+                class="mx-auto md:mx-0"
+              />
+              <h3
+                class="text-heading-dark font-heading text-2xl mt-12 mb-5 md:text-xl lg:text-3xl"
+              >
+                Canada
+              </h3>
+              <div class="leading-relaxed">
+                1528 Eglinton Avenue <br />
+                Toronto Ontario <br />
+                M4P 1A6 <br />
+                +1 416 485 2997
+              </div>
+            </div>
+            <div class="md:w-[223px] lg:w-[285px]">
+              <img
+                src="assets/about/desktop/illustration-australia.svg"
+                alt="map of australia"
+                class="mx-auto md:mx-0"
+              />
+              <h3
+                class="text-heading-dark font-heading text-2xl mt-12 mb-5 md:text-xl lg:text-3xl"
+              >
+                Australia
+              </h3>
+              <div class="leading-relaxed">
+                36 Swanston Street <br />
+                Kewell <br />
+                Victoria <br />
+                +61 4 9928 3629
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="footer px-6 md:px-10 rounded-sm mt-[7.5rem] mb-[4.5rem] lg:mt-[10.5rem] lg:mb-[5.4rem]"
+      id="footer"
+    >
+      <div
+        class="container bg-dark-grey-blue flex flex-col gap-12 items-center py-[3.5rem] text-center md:gap-8 lg:py-12 lg:flex-row lg:justify-between lg:gap-[6.4rem] xl:px-[5.3125rem]"
+      >
+        <!-- Logo -->
+        <div class="logo">
+          <img src="assets/shared/desktop/logo-light.png" alt="logo" />
+        </div>
+        <div class="lg:flex lg:items-center lg:flex-1 lg:justify-between">
+          <!-- Nav -->
+          <nav class="secondary-navigation" aria-label="secondary-navigation">
+            <ul
+              role="list"
+              class="flex flex-col gap-6 md:flex-row md:gap-8 md:items-center"
+            >
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="plan.html">create your plan</a></li>
+            </ul>
+          </nav>
+          <!-- Socials -->
+          <ul
+            class="socials flex justify-center gap-6 mt-12 md:mt-[4rem] lg:mt-0"
+            role="list"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="uppercase text-grey"
+                target="_blank"
+                aria-label="facebook"
+              >
+                <svg class="social-icon">
+                  <use
+                    xlink:href="assets/shared/desktop/social-icons.svg#icon-facebook"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="uppercase text-grey"
+                aria-label="twitter"
+              >
+                <svg class="social-icon">
+                  <use
+                    xlink:href="assets/shared/desktop/social-icons.svg#icon-twitter"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="index.html"
+                class="uppercase text-grey"
+                aria-label="instagram"
+              >
+                <svg class="social-icon">
+                  <use
+                    xlink:href="assets/shared/desktop/social-icons.svg#icon-instagram"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

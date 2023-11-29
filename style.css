@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:opsz,wght@9..144,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------- */
+/* Reset */
+/* -------------------- */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* -------------------- */
+/* Utility Classes */
+/* -------------------- */
+
+.flow > :where(:not(:first-child)) {
+  margin-top: var(--flow, 1rem);
+}
+
+.flow-sm > :where(:not(:first-child)) {
+  margin-top: var(--flow, 0.5rem);
+}
+
+.flow-md > :where(:not(:first-child)) {
+  margin-top: var(--flow, 1.5rem);
+}
+
+.flow-lg > :where(:not(:first-child)) {
+  margin-top: var(--flow, 2rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container {
+  padding-inline: 1.5rem;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: 2.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding-inline: 0;
+  }
+}
+
+/* -------------------- */
+/* Components */
+/* -------------------- */
+
+/* buttons */
+.btn-primary {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 1rem 2rem;
+  font-weight: 900;
+  cursor: pointer;
+  @apply bg-dark-cyan text-body-light text-lg font-serif;
+}
+
+.btn-primary:hover {
+  background-color: hsla(179, 55%, 61%, 1);
+}
+
+.btn-primary:disabled {
+  background-color: hsla(25, 11%, 87%, 1);
+}
+
+.btn-checkout {
+  display: inline-block;
+  border-radius: 6px;
+  padding-block: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+  @apply text-body-light text-lg font-serif;
+}
+
+/* primary navigation */
+
+nav ul li > a {
+  text-transform: uppercase;
+  font-weight: 700;
+  @apply text-grey text-xs;
+  letter-spacing: 0.923px;
+}
+
+.primary-navigation ul li > a:hover {
+  @apply text-dark-grey-blue;
+}
+
+.secondary-navigation ul li > a:hover {
+  @apply text-light-cream;
+}
+
+@media (max-width: 640px) {
+  .mobile-nav-toggle {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+  }
+
+  .mobile-nav-toggle > span {
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    z-index: 1;
+    border-radius: 4px;
+    @apply bg-dark-grey-blue;
+    transform: rotate(0);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .one {
+    top: 3px;
+  }
+
+  .two {
+    top: 11px;
+  }
+
+  .three {
+    top: 19px;
+  }
+
+  .mobile-nav-toggle[aria-expanded='true'] .one {
+    top: 11px;
+    transform: rotate(45deg);
+  }
+  .mobile-nav-toggle[aria-expanded='true'] .two {
+    opacity: 0;
+  }
+  .mobile-nav-toggle[aria-expanded='true'] .three {
+    top: 11px;
+    transform: rotate(-45deg);
+  }
+
+  .primary-navigation {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 6rem;
+    width: 100%;
+    height: 100vh;
+    padding-top: 2.5rem;
+    background-color: white;
+  }
+
+  .primary-navigation[data-visible='false'] {
+    display: none;
+  }
+
+  .primary-navigation ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .primary-navigation ul li > a {
+    @apply font-serif text-dark-grey-blue;
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+}
+
+.large-number {
+  line-height: 1;
+  @apply font-heading text-pale-orange text-6xl;
+}
+
+.oval-line {
+  width: clamp(28rem, 68vw, 45rem);
+}
+
+/* modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 20;
+  width: clamp(327px, 87.2vw, 450px);
+}
+
+.overlay {
+  display: none;
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+}
+
+/* Radio buttons */
+input[type='radio'] {
+  display: none;
+}
+
+input[type='radio'] + label {
+  padding: 1.5rem;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  background-color: hsla(43, 30%, 94%, 1);
+  border-radius: 8px;
+}
+
+input[type='radio']:checked + label {
+  @apply bg-dark-cyan;
+}
+
+input[type='radio']:checked + label h3,
+input[type='radio']:checked + label p {
+  color: white;
+}
+
+input[type='radio']:not(:checked) + label:hover {
+  background-color: hsla(25, 95%, 86%, 1);
+}
+
+@media (min-width: 768px) {
+  input[type='radio'] + label {
+    padding: 2rem 1.6rem 5.3rem 1.6rem;
+    min-height: 250px;
+  }
+
+  .modal {
+    width: 540px;
+  }
+
+  .btn-checkout {
+    @apply bg-dark-cyan;
+  }
+
+  .btn-checkout:hover {
+    background-color: hsla(179, 55%, 61%, 1);
+  }
+}
+
+@media (min-width: 1240px) {
+  .oval-line {
+    width: 47.625rem;
+  }
+}
+
+/* -------------------- */
+/* General Styling */
+/* -------------------- */
+
+/* hero section */
+
+.hero .bg-container {
+  background-image: url(assets/home/mobile/image-hero-coffeepress.jpg);
+  background-size: cover;
+  border-radius: 10px;
+  padding-inline: 1.5rem;
+}
+
+/* product collection */
+
+/* .product-collection .container::before {
+  content: 'our collection';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: max-content;
+  height: max-content;
+  font-size: 2rem;
+  background: linear-gradient(180deg, rgba(254, 252, 247, 0) 0%, #fefcf7 100%);
+  @apply font-heading;
+  z-index: 1;
+} */
+
+/* features */
+
+/* cta */
+
+/* footer */
+.footer .social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+}
+
+.social-icon {
+  fill: white;
+}
+
+.socials > li a:hover > .social-icon {
+  @apply fill-pale-orange;
+}
+
+@media (min-width: 768px) {
+  .hero .bg-container {
+    background-image: url(assets/home/tablet/image-hero-coffeepress.jpg);
+    padding-inline: 3.6rem;
+  }
+}
+
+@media (min-width: 1240px) {
+  .hero .bg-container {
+    background-image: url(assets/home/desktop/image-hero-coffeepress.jpg);
+  }
+}
+
+@media (min-width: 1360px) {
+}
+
+/* About Section */
+
+.hero--about .container {
+  background-image: url(assets/about/mobile/image-hero-whitecup.jpg);
+  background-size: cover;
+}
+
+.hero--plan .container {
+  background-image: url(assets/plan/mobile/image-hero-blackcup.jpg);
+  background-size: cover;
+}
+
+.commitment-image {
+  background-image: url(assets/about/mobile/image-commitment.jpg);
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.commitment-two .image {
+  background-image: url(assets/about/mobile/image-quality.jpg);
+  background-size: cover;
+}
+
+/* order section */
+.message {
+  color: white;
+  @apply font-serif text-xl;
+}
+
+.summary-message {
+  @apply text-grey;
+}
+
+.message span,
+.summary-message span {
+  @apply text-dark-cyan;
+}
+
+.toggle-arrow {
+  transform: rotate(0);
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+
+.toggle-arrow.rotate {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 768px) {
+  .hero--about .container {
+    background-image: url(assets/about/tablet/image-hero-whitecup.jpg);
+  }
+
+  .hero--plan .container {
+    background-image: url(assets/plan/tablet/image-hero-blackcup.jpg);
+    background-size: cover;
+  }
+
+  .commitment-image {
+    background-image: url(assets/about/tablet/image-commitment.jpg);
+    background-size: cover;
+    height: 470px;
+    min-width: 38.25%;
+    border-radius: 8px;
+  }
+
+  .commitment-two .image {
+    background-image: url(assets/about/tablet/image-quality.jpg);
+  }
+}
+
+@media (min-width: 1240px) {
+  .hero--about .container {
+    background-image: url(assets/about/desktop/image-hero-whitecup.jpg);
+  }
+
+  .hero--plan .container {
+    background-image: url(assets/plan/desktop/image-hero-blackcup.jpg);
+    background-size: cover;
+  }
+
+  .commitment-image {
+    background-image: url(assets/about/tablet/image-commitment.jpg);
+    background-size: cover;
+    height: 520px;
+    min-width: 445px;
+    border-radius: 8px;
+  }
+
+  .commitment-two .image {
+    background-image: url(assets/about/desktop/image-quality.jpg);
+    right: clamp(3rem, 4vw, 5.3rem);
+  }
+}
